@@ -18,7 +18,8 @@ const options = {
 };
  
 mapboxgl.accessToken = 'pk.eyJ1IjoieXV2cnhqc3IiLCJhIjoiY2xxM3g4a3NhMDE0bzJrbnZ6dGp6cmQwYSJ9.ko0Ddi2P09rnxx5TYkiSpQ';
- 
+const marker1 = new mapboxgl.Marker({color: '#ff7342'})
+
 function mapConfig(longitude, latitude){
     const map = new mapboxgl.Map({
         container: 'map',
@@ -34,8 +35,7 @@ function mapConfig(longitude, latitude){
         'top-left'
     );
     
-    const marker1 = new mapboxgl.Marker({color: '#ff7342'})
-    .setLngLat([longitude, latitude])
+    marker1.setLngLat([longitude, latitude])
     .addTo(map);
 }
 
